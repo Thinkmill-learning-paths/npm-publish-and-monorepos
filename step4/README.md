@@ -1,4 +1,6 @@
-# Automate your Publishing
+# npm publish
+
+## Step 4 - Automate your Publishing
 
 By now, you should have a process/workflow you can run to publish your packages, however it likely involves several manual steps. We want to change that.
 

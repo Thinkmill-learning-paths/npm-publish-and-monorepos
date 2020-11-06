@@ -1,4 +1,6 @@
-# Publishing in a Monorepo
+# npm publish
+
+## Step 3 - Publishing in a Monorepo
 
 Many Thinkmill projects (particularly ones we publish to npm) exist in a monorepo. As such, knowing how to publish from a monorepo is an important extra step. Monorepos present extra interesting challenges to publishing:
 

@@ -1,4 +1,6 @@
-# Publishing `dist` Instead of `source`
+# npm publish
+
+## Step 2 - Publishing `dist` Instead of `source`
 
 It is common when publishing to build your code, and then not publish the dist. This is because we often write our code in a format that is not natively readable, and node modules are not processed by client build systems.
 

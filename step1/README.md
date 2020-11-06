@@ -1,4 +1,6 @@
-# A Simple Publish
+# npm publish
+
+## Step 1 - A Simple Publish
 
 For this lesson, we are going to publish a package to npm. We have created a very simple package in the folder `/simple-package` in this repository.
 

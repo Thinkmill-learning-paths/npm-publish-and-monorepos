@@ -1,0 +1,11 @@
+{
+    "name": "@noviny/learning-test-package-2",
+    "version": "1.0.0",
+    "main": "src",
+    "dependencies": {
+        "@noviny/learning-test-package-1": "1.0.0"
+    },
+    "devDependencies": {
+        "@noviny/learning-do-not-publish": "1.0.0"
+    }
+}

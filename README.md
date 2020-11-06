@@ -1,6 +1,6 @@
 # npm publish
 
-> Learn some of the forgotten basics of CSS
+ > Learn how to publish and republish packages on npm 
 
 ## Owner
 

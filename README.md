@@ -1,6 +1,6 @@
-# npm-publish
+# npm publish
 
-> Learn how to publish and republish packages on npm
+ > Learn how to publish and republish packages on npm 
 
 ## Owner
 
@@ -8,11 +8,9 @@ Noviny
 
 ## Content
 
-- [step 1: a simple publish](step-1)
-- [step 2: publishing dist instead of source](step-2)
-- [step 3: publishing in a monorepo](step-3)
-- [step 4: automate your publishing](step-4)
+- [Step 1 - a simple publish](step1/)
+- [Step 2 - publishing dist instead of source](step2/)
+- [Step 3 - publishing in a monorepo](step3/)
+- [Step 4 - automate your publishing](step4/)
 
-## Module length
-
-Short
+## Graduates

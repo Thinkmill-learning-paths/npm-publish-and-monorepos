@@ -1,1 +1,1 @@
-module.exports = "Should only be available in the monorepo";
+module.exports = 'Should only be available in the monorepo';

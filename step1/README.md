@@ -8,7 +8,7 @@ Work inside the directory `/simple-package` or copy the directory's contents to 
 
 Before publishing, update the scope in the package's name to your own github (npm?) username (why?).
 
-Validate this works by: 
+Validate this works: 
 * the published package can be installed in a new project
 * running the following code with `node index.js`: 
  

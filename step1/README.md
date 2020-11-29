@@ -2,11 +2,11 @@
 
 ## Step 1 - A Simple Publish
 
-This task is to publish a package to npm. 
+This task is to publish a package to npm.
 
 Work inside the directory `/simple-package` or copy the directory's contents to a new project. 
 
-Before publishing, update the scope in the package's name to your own github (npm?) username (why?).
+Before publishing, update the scope in the package's name to your own npm username. This will allow you to publish to your own scope
 
 Validate this works: 
 * the published package can be installed in a new project

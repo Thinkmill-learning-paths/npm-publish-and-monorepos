@@ -2,28 +2,25 @@
 
 ## Step 1 - A Simple Publish
 
-For this lesson, we are going to publish a package to npm. We have created a very simple package in the folder `/simple-package` in this repository.
+This task is to publish a package to npm.
 
-You should clone this repository, or copy the two files from that repository across to your own folder.
+Work inside the directory `/simple-package` or copy the directory's contents to a new project. 
 
-Before you can publish, you will need to change the package's name. I recommend changing the scope to your own github username.
+Before publishing, update the scope in the package's name to your own npm username. This will allow you to publish to your own scope
 
-You can show that you have succeeded if, in a different project, you can run
-
-```
-yarn add @noviny/learning-test-package-1
-```
-
-except with your package name, and then if you write and run the file:
-
-```js
-const testString = require("@noviny/learning-test-package-1");
-
-// This should print out "Congratulations! You did it!"
-console.log(testString);
-```
-
-it prints out the string as expected.
+Validate this works: 
+* the published package can be installed in a new project
+* running the following code with `node index.js`: 
+ 
+    ```index.js
+    const testString = require("[your scope]/learning-test-package-1");
+    
+    // This should print out "Congratulations! You did it!"
+    console.log(testString);
+    ```
+    
+    prints "Congratulations! You did it!".
+    
 
 ## Bonus Tasks
 

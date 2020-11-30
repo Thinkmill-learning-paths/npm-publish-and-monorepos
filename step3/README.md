@@ -1,24 +1,52 @@
 # npm publish
 
-## Step 3 - Publishing in a Monorepo
+## Step 3 - Creating a Monorepo
 
-Many Thinkmill projects (particularly ones we publish to npm) exist in a monorepo. As such, knowing how to publish from a monorepo is an important extra step. Monorepos present extra interesting challenges to publishing:
+Many Thinkmill projects (particularly ones we publish to npm) exist in a monorepo. As such, knowing how to set up a monorepo is often important when you are publishing packages.
 
-1. Logistically, going in to each package and running a build script and then a publish script is very inefficient
-2. You may not want to publish every package every time, meaning going in to each package to publish can lead to errors
-3. There may be inter-dependencies between packages, and publishing one may mean you should also publish a second, but you may want to update the dependency of the second package. (this sentence is too dense)
-4. Some packages are private, and you need to understand how to ensure these private packages are NOT published
+### What is a Monorepo?
 
-Thinkmill has invested in a tool that helps manage this complexity - [changesets](https://github.com/atlassian/changesets).
+For information on monorepos, and how Thinkmill thinks about them, we recommend reading through the contents on [our monorepo guide](https://monorepo.guide/).
 
-To complete this exercise you need to:
+### Completing this Excercise
 
-- Be able to update the versions of multiple packages at once, after changes are made.
-- Update the script `release` to version and publish the packages.
--
+To complete this excercise, you will need to set up a monorepo for use in Step 4. It will need to have the following packages:
 
-We recommend using changesets, but you can also experiment with creating your own publishing flows.
+```json
+{
+	"name": "@[your-scope]/learning-do-not-publish",
+	"version": "1.0.0",
+	"main": "src"
+}
+```
 
-## Bonus
+```json
+{
+	"name": "@[your-scope]/learning-test-package-1",
+	"version": "1.0.0",
+	"main": "src"
+}
 
-- Add preconstruct and manypkg to your monorepo
+```
+
+```json
+{
+	"name": "@[your-scope]/learning-test-package-2",
+	"version": "1.0.0",
+	"main": "src",
+	"dependencies": {
+		"@noviny/learning-test-package-1": "0.1.0"
+	},
+	"devDependencies": {
+		"@noviny/learning-do-not-publish": "0.1.0"
+	}
+}
+```
+
+And add a `src/index.js` for each package.
+
+Once you have the packages set up, you will want to add a `workspaces` field to the root `package.json`, and add `preconstruct` and `manypkg` into your project, following their own docs.
+
+You will add changesets in during the next step.
+
+NOTE: The configs I have given you will create errors - you will need to solve these

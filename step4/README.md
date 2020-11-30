@@ -1,21 +1,21 @@
 # npm publish
 
-## Step 4 - Automate your Publishing
+## Step 4 - Publishing in a Monorepo
 
-By now, you should have a process/workflow you can run to publish your packages, however it likely involves several manual steps. We want to change that.
+This exercise uses the monorepo we created in Step 3.
 
-For this process, we want to take our `simple-monorepo` have a documented workflow on how contributors:
+Many Thinkmill projects (particularly ones we publish to npm) exist in a monorepo. As such, knowing how to publish from a monorepo is an important extra step. Monorepos present extra interesting challenges to publishing:
 
-- Design a workflow for deployment - what actions are automated, and what actions users/publishers need to take - discuss this with Noviny. The assumptions are:
-  - There will be many contributors
-  - Contributors need to be safe-guarded against failing to release their code
-  - There is a single 'decider' on when to publish
-  - The publisher should run as few commands as possible
-- After discussing it, implement it in a clone of the simple monorepo
+1. Logistically, going in to each package and running a build script and then a publish script is very inefficient
+2. You may not want to publish every package every time, meaning going in to each package to publish can lead to errors
+3. There may be inter-dependencies between packages, and publishing one may mean you should also publish a second, but you may want to update the dependency of the second package. (this sentence is too dense)
+4. Some packages are private, and you need to understand how to ensure these private packages are NOT published
 
-TM has prior art on this here:
+Thinkmill has invested in a tool that helps manage this complexity - [changesets](https://github.com/atlassian/changesets).
 
-- [action](https://github.com/changesets/action)
-- [bot](https://github.com/changesets/bot)
+To complete this exercise you need to:
 
-We use these for most projects requiring publishing
+- Be able to update the versions of multiple packages at once, after changes are made.
+- Update the script `release` to version and publish the packages.
+
+We recommend using changesets, but you can also experiment with creating your own publishing flows.

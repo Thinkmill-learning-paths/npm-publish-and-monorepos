@@ -3,7 +3,9 @@
 	"description": "Learn how to publish and republish packages on npm",
 	"version": "1.0.0",
 	"private": true,
-	"author": {},
+	"author": {
+		"name": "Noviny"
+	},
 	"contributors": [],
 	"repository": {
 		"type": "git",

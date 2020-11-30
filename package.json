@@ -1,6 +1,6 @@
 {
-	"name": "npm-publish",
-	"description": "Learn how to publish and republish packages on npm",
+	"name": "npm-publish-and-monorepos",
+	"description": "Learn how to publish and republish packages on npm as well as set up a monorepo",
 	"version": "1.0.0",
 	"private": true,
 	"author": {
